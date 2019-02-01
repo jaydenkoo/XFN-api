@@ -1,34 +1,24 @@
 {
-  "name": "xfn-api",
-  "version": "1.0.0",
-  "description": "小肥牛扫码点餐数据API子系统",
-  "main": "index.js",
+  "name": "xiaofeiniu-admin",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js",
-    "dev": "node-dev ./index.js"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaydenkoo/XFN-api.git"
-  },
-  "keywords": [
-    "小肥牛",
-    "xiaofeiniu",
-    "扫码",
-    "钟佳宁牛逼"
-  ],
-  "author": "Koo Jiansheng",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jaydenkoo/XFN-api/issues"
-  },
-  "homepage": "https://github.com/jaydenkoo/XFN-api#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "multer": "^1.4.1",
-    "mysql": "^2.16.0"
+    "axios": "^0.18.0",
+    "element-ui": "^2.5.2",
+    "qrcode": "^1.3.3",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.21"
   }
 }
