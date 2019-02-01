@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button id="bt1">管理员登录</button>
+  <button id="bt2">修改管理员密码</button>
+  <script src="./axios.min.js"></script>
+  <script>
+    bt1.onclick = function(){
+      axios.get('http://127.0.0.1:8090/admin/login/admin/123456').then((result)=>{
+        console.log('登录完成！结果为：');
+        console.log(result.data);
+      }).catch((err)=>{
+        console.log(err); 
+      })
+    }
+
+    bt2.onclick = function(){
+      var data = {aname: 'admin', oldPwd:'123456', newPwd:'666666'};
+
+      axios.patch('http://127.0.0.1:8090/admin', data).then((result)=>{
+        console.log('改密操作执行成功：')
+        console.log(result.data);
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+
+  </script>
+</body>
+</html>
